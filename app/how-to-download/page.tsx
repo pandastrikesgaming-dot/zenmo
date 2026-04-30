@@ -119,8 +119,9 @@ export default function HowToDownloadPage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/downloads/zenmo.apk"
-              download
+              href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
             >
               Download APK
@@ -179,8 +180,9 @@ export default function HowToDownloadPage() {
         <SafetyWarning />
         <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
           <Link
-            href="/downloads/zenmo.apk"
-            download
+            href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
           >
             Download APK
