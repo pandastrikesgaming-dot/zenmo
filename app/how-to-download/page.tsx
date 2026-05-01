@@ -102,6 +102,35 @@ function SafetyWarning() {
   );
 }
 
+function DownloadTrustNote() {
+  return (
+    <div className="border border-white/10 bg-white/[0.04] p-3 shadow-[0_18px_50px_rgba(0,0,0,0.28)] backdrop-blur">
+      <div className="flex items-start gap-3">
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center border border-ember/45 bg-ember/10 text-sm font-semibold text-solar">
+          ✓
+        </span>
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-white">
+            Official Zenmo APK
+          </p>
+          <p className="mt-1 text-xs font-medium leading-5 text-stone-300">
+            Safe to download &bull; No third-party redirects
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DownloadInstallNote() {
+  return (
+    <p className="max-w-md text-xs leading-6 text-stone-400">
+      This is the official Zenmo download. If your phone shows an install
+      warning, it is because the app is installed outside the Play Store.
+    </p>
+  );
+}
+
 export default function HowToDownloadPage() {
   return (
     <section className="mx-auto w-full max-w-7xl px-5 pb-24 pt-28 sm:px-6 lg:px-8 lg:pt-32">
@@ -117,21 +146,25 @@ export default function HowToDownloadPage() {
             Follow these steps carefully to install Zenmo safely on your Android
             phone.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
-            >
-              Download APK
-            </Link>
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
-            >
-              Back to Home
-            </Link>
+          <div className="mt-8 grid gap-3">
+            <DownloadTrustNote />
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+              >
+                Download APK
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
+              >
+                Back to Home
+              </Link>
+            </div>
+            <DownloadInstallNote />
           </div>
         </div>
 
@@ -178,21 +211,25 @@ export default function HowToDownloadPage() {
 
       <div className="mx-auto mt-12 grid w-full max-w-[21rem] gap-6 border border-white/10 bg-gradient-to-br from-ember/[0.14] via-white/[0.04] to-blueGlow/[0.12] p-5 shadow-soft-glow sm:max-w-none sm:p-6 lg:grid-cols-[1fr_auto] lg:items-center">
         <SafetyWarning />
-        <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-          <Link
-            href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
-          >
-            Download APK
-          </Link>
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
-          >
-            Back to Home
-          </Link>
+        <div className="grid gap-3 lg:justify-items-end">
+          <DownloadTrustNote />
+          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <Link
+              href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+            >
+              Download APK
+            </Link>
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
+            >
+              Back to Home
+            </Link>
+          </div>
+          <DownloadInstallNote />
         </div>
       </div>
     </section>
