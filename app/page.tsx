@@ -158,28 +158,37 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-8 border border-white/10 bg-gradient-to-br from-ember/[0.16] via-white/[0.04] to-blueGlow/[0.12] p-6 shadow-soft-glow sm:p-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-solar">
-              Android preview
+              Fast Access
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white">
-              Start with the Zenmo APK.
+              Open Zenmo instantly in your browser.
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-stone-300 sm:text-base">
-              Install the preview build and bring class notes, uploads,
-              messages, and profiles into one focused student workspace.
+            <div className="mt-4 space-y-2">
+              <p className="flex items-center gap-2 text-sm text-stone-300">
+                <span className="h-1.5 w-1.5 bg-solar" />
+                Install it like an app using Flash Install
+              </p>
+              <p className="flex items-center gap-2 text-sm text-stone-300">
+                <span className="h-1.5 w-1.5 bg-solar" />
+                No downloads required to get started
+              </p>
+            </div>
+            <p className="mt-6 text-xs font-medium text-stone-400">
+              Zenmo opens securely in your browser and can be installed like an app.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/how-to-download"
+              href="https://zenmo-pwa.vercel.app"
               className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
             >
-              Download APK
+              Open Zenmo
             </Link>
             <Link
-              href="/support"
+              href="/how-to-download"
               className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
             >
-              Contact Support
+              Download APK
             </Link>
           </div>
         </div>

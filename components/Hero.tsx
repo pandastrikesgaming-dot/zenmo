@@ -15,24 +15,28 @@ export function Hero() {
             Notes, shared safely within your class
           </h1>
           <p className="mt-6 max-w-2xl break-words text-base leading-8 text-stone-300 sm:text-lg">
-            Zenmo is a class-based note sharing app where students from the
-            same school, class, and section can upload notes, browse study
-            material, message classmates, and build useful student profiles.
+            Zenmo is a class-based note sharing app where students can upload
+            notes, browse study material, and message classmates. Open Zenmo
+            instantly in your browser and install it like an app using Flash
+            Install. No downloads required to get started.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/how-to-download"
+              href="https://zenmo-pwa.vercel.app"
               className="inline-flex items-center justify-center border border-solar/50 bg-solar px-6 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_0_34px_rgba(255,213,106,0.28)]"
+            >
+              Open Zenmo
+            </Link>
+            <Link
+              href="/how-to-download"
+              className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
             >
               Download APK
             </Link>
-            <Link
-              href="/support"
-              className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
-            >
-              Contact Support
-            </Link>
           </div>
+          <p className="mt-4 text-xs font-medium text-stone-400">
+            Zenmo opens securely in your browser and can be installed like an app.
+          </p>
         </div>
 
         <div className="relative min-w-0 animate-float-soft border border-white/10 bg-white/[0.035] p-4 shadow-premium-card backdrop-blur">

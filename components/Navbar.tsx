@@ -8,7 +8,7 @@ const links = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/#features" },
   { label: "Install Guide", href: "/how-to-download" },
-  { label: "Download", href: "/#download" },
+  { label: "Open Zenmo", href: "https://zenmo-pwa.vercel.app" },
   { label: "Support", href: "/support" }
 ];
 
@@ -49,10 +49,10 @@ export function Navbar() {
         </div>
 
         <Link
-          href="/how-to-download"
+          href="https://zenmo-pwa.vercel.app"
           className="hidden border border-ember/50 bg-ember/10 px-4 py-2 text-sm font-semibold text-orange-100 transition duration-300 hover:-translate-y-0.5 hover:bg-ember hover:text-black md:inline-flex"
         >
-          Download APK
+          Open Zenmo
         </Link>
 
         <button

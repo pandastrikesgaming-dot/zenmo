@@ -137,34 +137,60 @@ export default function HowToDownloadPage() {
       <div className="mx-auto grid w-full max-w-[21rem] gap-8 sm:max-w-none lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
         <div className="min-w-0">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-solar">
-            Android install guide
+            Installation Guide
           </p>
           <h1 className="mt-5 max-w-full break-words text-3xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-            How to Install Zenmo APK on Android
+            Get Zenmo on any device
           </h1>
           <p className="mt-6 max-w-full break-words text-base leading-8 text-stone-300 sm:max-w-2xl sm:text-lg">
-            Follow these steps carefully to install Zenmo safely on your Android
-            phone.
+            Recommended: Open the Zenmo PWA for the best experience across all
+            your devices. No downloads required to get started.
           </p>
-          <div className="mt-8 grid gap-3">
-            <DownloadTrustNote />
+
+          <div className="mt-8 grid gap-6">
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                {
+                  platform: "Android / PC",
+                  action: "One-click install"
+                },
+                {
+                  platform: "iOS (iPhone)",
+                  action: "Add to Home Screen"
+                },
+                {
+                  platform: "Browser",
+                  action: "Instant access"
+                }
+              ].map((item) => (
+                <div
+                  key={item.platform}
+                  className="border border-white/10 bg-white/[0.04] p-4"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wider text-solar">
+                    {item.platform}
+                  </p>
+                  <p className="mt-1 text-sm text-white">{item.action}</p>
+                </div>
+              ))}
+            </div>
+
             <div className="flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="https://zenmo-pwa.vercel.app"
+                className="inline-flex items-center justify-center border border-solar/50 bg-solar px-6 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white shadow-[0_0_24px_rgba(255,213,106,0.25)]"
+              >
+                Open Zenmo PWA
+              </Link>
               <Link
                 href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+                className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
               >
-                Download APK
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
-              >
-                Back to Home
+                Download APK (Optional)
               </Link>
             </div>
-            <DownloadInstallNote />
           </div>
         </div>
 
@@ -212,24 +238,26 @@ export default function HowToDownloadPage() {
       <div className="mx-auto mt-12 grid w-full max-w-[21rem] gap-6 border border-white/10 bg-gradient-to-br from-ember/[0.14] via-white/[0.04] to-blueGlow/[0.12] p-5 shadow-soft-glow sm:max-w-none sm:p-6 lg:grid-cols-[1fr_auto] lg:items-center">
         <SafetyWarning />
         <div className="grid gap-3 lg:justify-items-end">
-          <DownloadTrustNote />
           <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <Link
+              href="https://zenmo-pwa.vercel.app"
+              className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white shadow-[0_0_24px_rgba(255,213,106,0.25)]"
+            >
+              Open Zenmo PWA
+            </Link>
             <Link
               href="https://github.com/pandastrikesgaming-dot/zenmo/releases/download/v1.0.0/zenmo.apk"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border border-solar/50 bg-solar px-5 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
-            >
-              Download APK
-            </Link>
-            <Link
-              href="/"
               className="inline-flex items-center justify-center border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10"
             >
-              Back to Home
+              Download APK (Optional)
             </Link>
           </div>
-          <DownloadInstallNote />
+          <p className="max-w-md text-right text-xs leading-6 text-stone-400">
+            Recommended: Open Zenmo in your browser and install it as an app for
+            the best experience.
+          </p>
         </div>
       </div>
     </section>
